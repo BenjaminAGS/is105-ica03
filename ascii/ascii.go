@@ -43,5 +43,5 @@ func IterateOverASCIIStringLiteral(sl string) {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1b
 func GreetingASCII() {
-	fmt.Printf("%c", []rune("\x48\x65\x6c\x6c\x6f\x20\x3a\x2d\x29"))
+	fmt.Printf("%c", []byte("\x48\x65\x6c\x6c\x6f\x20\x3a\x2d\x29"))
 }
