@@ -1,10 +1,16 @@
-package fileutils
+package main
 
 import (
 	"io"
 	"log"
 	"os"
 )
+
+string filepath = "C:/Go/work/src/is105-ica03/files/lang01.wl"
+
+func main() {
+	fileToByteslice(filepath)
+}
 
 func fileToByteslice(filename string) []byte {
 
