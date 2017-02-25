@@ -8,6 +8,11 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
+func main() {
+	IterateOverASCIIStringLiteral()
+	GreetingASCII()
+}
+
 // Funksjon tar en streng med kun ASCII tegn og lager en utskrift på
 // følgende format:
 
@@ -21,16 +26,14 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 // 40 @ 1000000
 // ...
 
-func main() {
-	IterateOverASCIIStringLiteral(ascii)
-	GreetingASCII()
-}
-func IterateOverASCIIStringLiteral(sl string) {
-	for i := 0; i < len(sl); i++ {
-		var a = []rune(sl)[i]
-		fmt.Printf("%x ", a)
-		fmt.Printf("%c ", a)
-		fmt.Printf("%b\n ", a)
+func IterateOverASCIIStringLiteral() {
+
+	fmt.Println()
+	for i := 0; i < len(ascii); i++ {
+		fmt.Printf("%X ", ascii[i])
+		fmt.Printf("%c ", ascii[i])
+		fmt.Printf("%b\n", ascii[i])
+
 	}
 }
 
@@ -43,5 +46,7 @@ func IterateOverASCIIStringLiteral(sl string) {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1b
 func GreetingASCII() {
-	fmt.Printf("%c", []byte("\x48\x65\x6c\x6c\x6f\x20\x3a\x2d\x29"))
+	str := "\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29"
+	fmt.Println()
+	fmt.Println(str)
 }
